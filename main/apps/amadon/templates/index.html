@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	{% load static %}
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		<div class="jumbotron">
+			<h1>Amadon</h1>
+		</div>
+		<div class="container">
+			<table class="table">
+				<thead>
+					<tr>
+						<th scope="col">item</th>
+						<th scope="col">price</th>
+						<th scope="col">Action</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Dojo Shirt</td>
+						<td>19.99</td>
+						<td>
+							
+							<form action="/process" method="post">
+								{% csrf_token %}
+								<select name="amount">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+							</select>
+								<input type="hidden" name="product_id" value="1096">
+								<input type="submit" name="Submit">
+							</form>
+						</td>
+					</tr>
+					<tr>
+						<td>Dojo Sweater</td>
+						<td>19.99</td>
+						<td>
+							
+							<form action="/process" method="post">
+								{% csrf_token %}
+								<select name="amount">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+							</select>
+							<input type="hidden" name="product_id" value="1097">
+								<input type="submit" name="Submit">
+							</form>
+						</td>
+					</tr>
+					<tr>
+						<td>Dojo cup</td>
+						<td>4.99</td>
+						<td>
+							
+							<form action="/process" method="post">
+								{% csrf_token %}
+								<select name="amount">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+							</select>
+							<input type="hidden" name="product_id" value="1098">
+								<input type="submit" name="Submit">
+							</form>
+						</td>
+					</tr>
+					<tr>
+						<td>Algorithm Book</td>
+						<td>49.99</td>
+						<td>
+							
+							<form action="/process" method="post">
+								{% csrf_token %}
+								<select name="amount">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+							</select>
+							<input type="hidden" name="product_id" value="1090">
+								<input type="submit" name="Submit">
+							</form>
+						</td>
+					</tr>
+				</tbody>
+				
+			</table>	
+		</div>
+
+
+	</div>
+
+</body>
+</html>
